@@ -43,3 +43,27 @@ String myText = "Hello World";
 | Shift         | <<, >>, >>> |
 | Ternary       | ?: |
 | Unary         | ++x, –x, x++, x–, +x, –x, !, ~ |
+
+
+## How to accept user input
+```
+import java.util.Scanner;
+
+public class Main {
+public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("What is your name? ");
+        String name = scanner.nextLine();
+        System.out.println("hello "+name );
+    }
+}
+```
+### This will print to the console "What is your name?". The user inputs their name and "hello name" appears.
+
+### Static vs. Public
+You will often see Java programs that have either static or public attributes and methods.
+
+In the example above, we created a static method, which means that it can be accessed without creating an object of the class, unlike public, which can only be accessed by objects:
+
