@@ -2,7 +2,11 @@
 
 - [OOP - Object Oriented Programming](#object-oriented-programming)
 - [Mavin](#maven)
+- [Keyboard Short Cuts](#keyboard-short-cuts)
 
+
+
+<br><br><br>
 ## Primitive Data Types
 
 
@@ -72,7 +76,7 @@ You will often see Java programs that have either static or public attributes an
 
 In the example above, we created a static method, which means that it can be accessed without creating an object of the class, unlike public, which can only be accessed by objects:
 
-
+<br><br><br>
 # Object Oriented Programming
 
 ### Java Access Modifiers
@@ -106,7 +110,7 @@ Default
 ### 4. Polymorphism
 
 
-
+<br><br><br>
 # Maven
 
 ### New Project Set up
@@ -118,4 +122,15 @@ Group id:
 Artifact id: 
 - Name of the project
 
+<br><br><br>
+
+# Keyboard Short Cuts for Eclipse
+
+| Shortcut Key Mac                 | Description                                  |
+| -------------------------------- |--------------------------------------------- |
+|CTRL + Space + Enter              |	 Template ``public static void main(String[] args)``|										      
+| CMD + Option + S| Generate Constructor |
+| | Getters and Setters
+| CMD + Shift + O | Auto Object/Class Import|
+|"syso" followed by CRTL + Space | ``System.out.println()`` |
 
