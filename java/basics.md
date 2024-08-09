@@ -123,14 +123,3 @@ Artifact id:
 - Name of the project
 
 <br><br><br>
-
-# Keyboard Short Cuts for Eclipse
-
-| Shortcut Key Mac                 | Description                                  |
-| -------------------------------- |--------------------------------------------- |
-|CTRL + Space + Enter              |	 Template ``public static void main(String[] args)``|										      
-| CMD + Option + S| Generate Constructor |
-| | Getters and Setters
-| CMD + Shift + O | Auto Object/Class Import|
-|"syso" followed by CRTL + Space | ``System.out.println()`` |
-
