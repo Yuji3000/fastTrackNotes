@@ -132,5 +132,5 @@ Artifact id:
 | CMD + Option + S| Generate Constructor |
 | | Getters and Setters
 | CMD + Shift + O | Auto Object/Class Import|
-|"syso" followed by CRTL + Space | ``System.out.println()`` |
-
+| "syso" followed by CRTL + Space | ``System.out.println()`` |
+| CTRL + Space | Suggested Completions |
