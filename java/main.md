@@ -2,11 +2,11 @@
 
 - [OOP - Object Oriented Programming](#object-oriented-programming)
 - [Mavin](#maven)
-- [Keyboard Short Cuts](#keyboard-short-cuts)
 - [Generics](#generics)
 - [Wrappers](#wrappers)
 - [Collections](#collections)
-	- [HashSet](#hashet)
+	- [HashSet](#hashset)
+-[Arrays](#arrays)
 
 
 <br><br><br>
@@ -69,10 +69,10 @@ public static void main(String[] args) {
         System.out.println("What is your name? ");
         String name = scanner.nextLine();
         System.out.println("hello "+name );
+	// will print to the console "What is your name?". The user inputs their name and "hello name" appears.
     }
 }
 ```
-### This will print to the console "What is your name?". The user inputs their name and "hello name" appears.
 
 ### Static vs. Public
 You will often see Java programs that have either static or public attributes and methods.
@@ -125,22 +125,126 @@ Group id:
 Artifact id: 
 - Name of the project
 
-<<<<<<< HEAD
+
 <br><br><br>
 
-# Keyboard Short Cuts for Eclipse
-
-| Shortcut Key Mac                 | Description                                  |
-| -------------------------------- |--------------------------------------------- |
-|CTRL + Space + Enter              |	 Template ``public static void main(String[] args)``|										      
-| CMD + Option + S| Generate Constructor |
-| | Getters and Setters
-| CMD + Shift + O | Auto Object/Class Import|
-| "syso" followed by CRTL + Space | ``System.out.println()`` |
-| CTRL + Space | Suggested Completions |
 
 
 <br><br><br>
+
+
+# Arrays Class
+- Characteristics
+    - Fixed size: Once an array is created, its size cannot be changed.
+    - Indexed: Array elements are accessed using indices, starting from 0.
+    - Homogeneous: All elements in an array are of the same type.
+
+### examples
+
+1. Creating an Array with a Specific Size
+When you know the size of the array but don't have the values yet:
+
+```
+	// Create an array of integers with a size of 5
+	int[] numbers = new int[5];
+	
+	
+	// Create an array of Strings with a size of 3
+	String[] fruits = new String[3];
+
+```
+
+2. Creating and Initializing an Array with Values
+When you know the values you want to store in the array:
+
+```
+	// Create and initialize an array of integers
+	int[] numbers = {1, 2, 3, 4, 5};
+	
+	// Create and initialize an array of Strings
+	String[] fruits = {"Apple", "Banana", "Cherry"};
+
+```
+
+3. Creating an Array and Assigning Values Later
+You can also create an empty array and then assign values to its elements individually:
+
+```java
+	// Create an array of integers with a size of 3
+	int[] numbers = new int[3];
+	
+	// Assign values to the array elements
+	numbers[0] = 10;
+	numbers[1] = 20;
+	numbers[2] = 30;
+	
+	// Accessing an element in the array
+	int firstNumber = numbers[0]; // 10
+
+	// Create an array of integers with a size of 5
+ 	int[] numbers = new int[5];
+
+	// Create an array of Strings with a size of 3
+	String[] fruits = new String[3];
+	
+	
+	// Create and initialize an array of integers
+	int[] numbers = {1, 2, 3, 4, 5};
+	
+	// Create and initialize an array of Strings
+	String[] fruits = {"Apple", "Banana", "Cherry"};
+	
+```
+
+## Common Array methods
+
+- asList()
+
+```java
+	// Changes an array to a list
+		
+	int[] original = {1, 2, 3, 4, 5};
+	int[] copy = Arrays.copyOf(original, 3); // Copy first 3 elements
+	
+	System.out.println(Arrays.toString(copy)); // Output: [1, 2, 3]
+```
+
+- copyOf()
+
+```java
+
+    // creates a new array by copying the specified length from the original array
+    
+    int[] original = {1, 2, 3, 4, 5};
+    int[] copy = Arrays.copyOf(original, 3); // Copy first 3 elements
+
+    System.out.println(Arrays.toString(copy)); // Output: [1, 2, 3]
+```    
+
+- copyOfRange()
+
+```java
+	// creates a new array by copying elements from a specified range of the original array.
+
+	int[] original = {1, 2, 3, 4, 5};
+     int[] rangeCopy = Arrays.copyOfRange(original, 1, 4); // Copy elements from index 1 to 3
+
+     System.out.println(Arrays.toString(rangeCopy)); // Output: [2, 3, 4]
+
+```
+
+- toString()
+
+```java
+	//returns a string representation of the array
+	
+    int[] numbers = {1, 2, 3, 4, 5};
+    String arrayString = Arrays.toString(numbers);
+
+    System.out.println(arrayString); // Output: [1, 2, 3, 4, 5]
+```
+
+
 
 # Generics
 
@@ -158,7 +262,7 @@ PRO - better type safety over upcasting
 
 ## example-generic.java
 
-```
+```java
 	Integer[] intArray = {1, 2, 3, 4}; //displayArray returns 1 2 3 4
 	Double[] doubleArray = {1.1, 2.2, 3.3}; //displayArray returns 1.1 2.2 3.3 4.4
 	
@@ -176,11 +280,12 @@ PRO - better type safety over upcasting
 	
 ```
 
+
 ## Wrappers
 
 example
 
-```
+```java
 	// primitive data type declaration
 	
 	int age = 25;
@@ -230,7 +335,7 @@ Stores objects using hashing in a hash table.
 
 
   
-  ```
+  ```java
 	 // create new HashSet
 	 HashSet<String> fruits = new HashSet<>();
 	 
@@ -243,7 +348,7 @@ Stores objects using hashing in a hash table.
       
       // remove from set
       // cannot remove elements based on index 
-      fruits.remove("Apple);  // prints  ["Banana", "Cherry"]
+      fruits.remove("Apple");  // prints  ["Banana", "Cherry"]
       
 	for (String fruit: fruits) {
 		System.out.println(fruit);
@@ -258,7 +363,7 @@ Stores objects using hashing in a hash table.
   
   Removing duplicates from an ArrayList
   
-  ```
+  ```java
   
   	List<Integer> numberList = new ArrayList<>();
   	numberList.add(1);
@@ -294,7 +399,7 @@ Stores objects using hashing in a hash table.
 
 <br>
 
-```
+```java
 	// Create a new HashMap
         HashMap<String, Integer> fruitPrices = new HashMap<>();
 
@@ -311,9 +416,3 @@ Stores objects using hashing in a hash table.
 
 
 
-
-
-
-=======
-<br><br><br>
->>>>>>> baddb56b15dee79fc87d2b83f6919cb602a9fac7
