@@ -291,13 +291,22 @@ Stores objects using hashing in a hash table.
 
 ### HashMap
 
-- Characteristics
-
-
 <br>
 
-- Use case 
-	- 
+```
+	// Create a new HashMap
+        HashMap<String, Integer> fruitPrices = new HashMap<>();
+
+        // Add key-value pairs to the HashMap
+        fruitPrices.put("Apple", 3);
+        fruitPrices.put("Banana", 2);
+
+        // Print the HashMap
+        System.out.println(fruitPrices);
+	
+	   // Print output
+	   {Apple=3, Banana=2}
+```
 
 
 
