@@ -5,6 +5,8 @@
 - [Keyboard Short Cuts](#keyboard-short-cuts)
 - [Generics](#generics)
 - [Wrappers](#wrappers)
+- [Collections](#collections)
+	- [HashSet](#hashet)
 
 
 <br><br><br>
@@ -141,63 +143,37 @@ Artifact id:
 
 # Generics
 
+Generics enable types (classes and interfaces) to be parameters when defining:
+classes, interfaces and methods.
+A benefit is to eliminate the need to create multiple versions of methods or classes for various data types.
+Uses 1 version of a method/class for all reference data types.
+
 Parameterized types, like methods. You can pass various kinds of parameters into a generic method.
 It is a compile time safety check to know we are passing as a parameter where were expecting to be passing in.
 PRO - better type safety over upcasting
 
 
-## main.java
+
+
+## example-generic.java
 
 ```
-
-	Box<Order> b1 = new Box<Order>(order1)
-	// creating the generic 
+	Integer[] intArray = {1, 2, 3, 4}; //displayArray returns 1 2 3 4
+	Double[] doubleArray = {1.1, 2.2, 3.3}; //displayArray returns 1.1 2.2 3.3 4.4
 	
-	b1.setObj(order1);
+	// Instead of creating two methods for each array
+	// we create one method that can take either as a parameter
 	
-	System.out.println(b1.getObj());
+	displayArray(intArray);
 	
-```
-
-
-## generic-box.java
-
-```
-	public class Box <T> {
-		// <T> is convention for type
-		private T obj;
-		
-		public Box (Object obj) {
-			this.obj = obj;
+	public static <T> void displayArray(T[] array) {
+		for(T x : array) {
+			System.out.print(x+" ")
 		}
-		
-		public T getObj() {
-			return obj;
-		}
-		
-		public <S> void setObj(S obj) {
-			this.obj = obj;
-		}
-		
-		
+		System.out.println();
 	}
+	
 ```
-
-# Collections
-
-## Lists
-All lists maintain insertion order
-Can contain duplicate values
-Can directly access values based on their index
-Lists use generics, cannot use primitive types
-Not thread safe, should use vector instead
-
- ArrayList - A dynamic array
-
-
-
-HashSet - 
-HashMap - 
 
 ## Wrappers
 
@@ -221,6 +197,110 @@ example
 	
 	
 ```
+
+
+# Collections
+
+## Lists
+All lists maintain insertion order
+Can contain duplicate values
+Can directly access values based on their index
+Lists use generics, cannot use primitive types
+Not thread safe, should use vector instead
+
+ ArrayList - A dynamic array. Stores only reference data types
+
+
+## Sets
+A set is a Collection that cannot contain duplicate elements. It models the mathematical set abstraction. The Set interface contains only methods inherited from Collection and adds the restriction that duplicate elements are prohibited.
+Stores objects using hashing in a hash table. 
+
+### HashSet
+
+- Characteristics
+    - looks like array 
+    - has no order 
+    - no duplicate elements allowed 
+
+<br>
+
+- Use case 
+	- When you need a collection of data with none duplicate data and don't care about the sequence
+
+
+  
+  ```
+	 // create new HashSet
+	 HashSet<String> fruits = new HashSet<>();
+	 
+	 // add to set
+	 fruits.add("Apple");
+	 fruits.add("Banana");
+	 fruits.add("Cherry");
+      
+      System.out.println(fruits): // prints  [ "Apple", "Banana", "Cherry"]
+      
+      // remove from set
+      // cannot remove elements based on index 
+      fruits.remove("Apple);  // prints  ["Banana", "Cherry"]
+      
+	for (String fruit: fruits) {
+		System.out.println(fruit);
+	}
+	
+	// or to print each element
+	fruits.forEach(System.out::println);
+	
+  ```
+  
+  
+  
+  Removing duplicates from an ArrayList
+  
+  ```
+  
+  	List<Integer> numberList = new ArrayList<>();
+  	numberList.add(1);
+  	numberList.add(1);
+  	numberList.add(2);
+  	numberList.add(3);
+  	System.out.println(numberList); // prints [1, 1, 2, 3]
+  	
+  	// add to set to remove duplicates
+  	Set<Integer> numberSet = new HashSet<>();
+  	numberSet.addAll(numberList);
+  	System.out.println(numberSet); // prints [1, 2, 3]
+  	
+  	// or pass into new HashSet constructor
+  	Set<Integer> numberSet = new HashSet<>(numberList); 
+  	
+  	
+  ```
+  
+
+# Maps
+- Characteristics
+    - Don't maintain insertion order
+    - Stores values related to a key
+    - All keys unique
+    - Values can contain duplicates
+    - Can access values directly using their key, but <ins>cannot access keys directly</ins>
+
+<br>
+
+
+### HashMap
+
+- Characteristics
+
+
+<br>
+
+- Use case 
+	- 
+
+
+
 
 
 
