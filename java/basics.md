@@ -3,7 +3,8 @@
 - [OOP - Object Oriented Programming](#object-oriented-programming)
 - [Mavin](#maven)
 - [Keyboard Short Cuts](#keyboard-short-cuts)
-
+- [Generics](#generics)
+- [Wrappers](#wrappers)
 
 
 <br><br><br>
@@ -134,3 +135,92 @@ Artifact id:
 | CMD + Shift + O | Auto Object/Class Import|
 | "syso" followed by CRTL + Space | ``System.out.println()`` |
 | CTRL + Space | Suggested Completions |
+
+
+<br><br><br>
+
+# Generics
+
+Parameterized types, like methods. You can pass various kinds of parameters into a generic method.
+It is a compile time safety check to know we are passing as a parameter where were expecting to be passing in.
+PRO - better type safety over upcasting
+
+
+## main.java
+
+```
+
+	Box<Order> b1 = new Box<Order>(order1)
+	// creating the generic 
+	
+	b1.setObj(order1);
+	
+	System.out.println(b1.getObj());
+	
+```
+
+
+## generic-box.java
+
+```
+	public class Box <T> {
+		// <T> is convention for type
+		private T obj;
+		
+		public Box (Object obj) {
+			this.obj = obj;
+		}
+		
+		public T getObj() {
+			return obj;
+		}
+		
+		public <S> void setObj(S obj) {
+			this.obj = obj;
+		}
+		
+		
+	}
+```
+
+# Collections
+
+## Lists
+All lists maintain insertion order
+Can contain duplicate values
+Can directly access values based on their index
+Lists use generics, cannot use primitive types
+Not thread safe, should use vector instead
+
+ ArrayList - A dynamic array
+
+
+
+HashSet - 
+HashMap - 
+
+## Wrappers
+
+example
+
+```
+	// primitive data type declaration
+	
+	int age = 25;
+	double price = 19.99;
+	char grade = 'A';
+	boolean isAvailable = true;
+	
+	
+	// reference data types with wrappers
+	
+	Integer age = 25;            // Reference type for int
+	Double price = 19.99;        // Reference type for double
+	Character grade = 'A';       // Reference type for char
+	Boolean isAvailable = true;  // Reference type for boolean
+	
+	
+```
+
+
+
