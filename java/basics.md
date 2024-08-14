@@ -125,6 +125,7 @@ Group id:
 Artifact id: 
 - Name of the project
 
+<<<<<<< HEAD
 <br><br><br>
 
 # Keyboard Short Cuts for Eclipse
@@ -313,3 +314,6 @@ Stores objects using hashing in a hash table.
 
 
 
+=======
+<br><br><br>
+>>>>>>> baddb56b15dee79fc87d2b83f6919cb602a9fac7
