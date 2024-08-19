@@ -58,7 +58,7 @@ String myText = "Hello World";
 
 
 ## How to accept user input
-```
+```java
 import java.util.Scanner;
 
 public class Main {
@@ -157,7 +157,7 @@ When you know the size of the array but don't have the values yet:
 2. Creating and Initializing an Array with Values
 When you know the values you want to store in the array:
 
-```
+```java
 	// Create and initialize an array of integers
 	int[] numbers = {1, 2, 3, 4, 5};
 	
@@ -198,7 +198,7 @@ You can also create an empty array and then assign values to its elements indivi
 
 ## Common Array methods
 
-- asList()
+asList()
 
 ```java
 	// Changes an array to a list
@@ -209,7 +209,7 @@ You can also create an empty array and then assign values to its elements indivi
 	System.out.println(Arrays.toString(copy)); // Output: [1, 2, 3]
 ```
 
-- copyOf()
+copyOf()
 
 ```java
 
@@ -219,9 +219,13 @@ You can also create an empty array and then assign values to its elements indivi
     int[] copy = Arrays.copyOf(original, 3); // Copy first 3 elements
 
     System.out.println(Arrays.toString(copy)); // Output: [1, 2, 3]
+    
 ```    
 
-- copyOfRange()
+
+copyOfRange()
+
+
 
 ```java
 	// creates a new array by copying elements from a specified range of the original array.
@@ -413,6 +417,15 @@ Stores objects using hashing in a hash table.
 	   // Print output
 	   {Apple=3, Banana=2}
 ```
+
+### Common Collections Class Methods
+- .copy()
+- .sort()
+- .shuffle()
+- .reverse()
+- .synchronized*()
+- .unmodifiable*()
+
 
 
 
